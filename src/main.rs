@@ -10,7 +10,7 @@ use crate::routes::{get_users, add_user};
 #[tokio::main]
 async fn main() {
     let state = AppState::new().await;
-
+// ROUTES
     let app = Router::new()
         .route("/users", get(get_users))
         .route("/users", post(add_user))
